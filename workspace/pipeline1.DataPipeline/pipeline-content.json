@@ -2,7 +2,7 @@
   "properties": {
     "activities": [
       {
-        "name": "Lookup1",
+        "name": "Get Level1 Transform Instances",
         "type": "Lookup",
         "dependsOn": [],
         "policy": {
