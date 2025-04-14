@@ -1,5 +1,68 @@
 {
   "properties": {
-    "activities": []
+    "activities": [
+      {
+        "name": "Lookup1",
+        "type": "Lookup",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "FabricSqlDatabaseSource",
+            "sqlReaderStoredProcedureName": "[ELT].[GetTransformDefinition_L1]",
+            "storedProcedureParameters": {
+              "DeltaDate": {
+                "type": "DateTime"
+              },
+              "IngestID": {
+                "type": "Int32"
+              }
+            },
+            "queryTimeout": "02:00:00",
+            "partitionOption": "None"
+          },
+          "datasetSettings": {
+            "annotations": [],
+            "connectionSettings": {
+              "name": "ControlDB",
+              "properties": {
+                "annotations": [],
+                "type": "FabricSqlDatabase",
+                "typeProperties": {
+                  "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+                  "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+                },
+                "externalReferences": {
+                  "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+                }
+              }
+            },
+            "type": "FabricSqlDatabaseTable",
+            "schema": [],
+            "typeProperties": {}
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "DelayL1TransformationFlag": {
+        "type": "int"
+      },
+      "MaxTransformInstance": {
+        "type": "int"
+      },
+      "SourceSystemName": {
+        "type": "string"
+      },
+      "StreamName": {
+        "type": "string"
+      }
+    }
   }
 }
