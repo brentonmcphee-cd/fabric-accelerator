@@ -73,17 +73,29 @@
       }
     ],
     "parameters": {
-      "DelayL1TransformationFlag": {
-        "type": "int"
-      },
-      "MaxTransformInstance": {
-        "type": "int"
-      },
       "SourceSystemName": {
-        "type": "string"
+        "type": "string",
+        "defaultValue": "WWI"
       },
       "StreamName": {
-        "type": "string"
+        "type": "string",
+        "defaultValue": "People"
+      },
+      "MaxTransformInstance": {
+        "type": "int",
+        "defaultValue": 100
+      },
+      "DelayL1TransformationFlag": {
+        "type": "int",
+        "defaultValue": 0
+      },
+      "SilverObjectID": {
+        "type": "string",
+        "defaultValue": "cc80a0ab-603d-4df9-bdfc-c35a7e8ab095"
+      },
+      "SilverWorkspaceID": {
+        "type": "string",
+        "defaultValue": "5acf5e70-08fd-48ba-9acc-dc997b845117"
       }
     }
   }
