@@ -66,8 +66,19 @@
             }
           }
         },
-        "externalReferences": {
-          "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+        "connectionSettings": {
+          "name": "ControlDB",
+          "properties": {
+            "annotations": [],
+            "type": "FabricSqlDatabase",
+            "typeProperties": {
+              "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+              "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+            },
+            "externalReferences": {
+              "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+            }
+          }
         }
       },
       {
@@ -327,8 +338,19 @@
             }
           }
         },
-        "externalReferences": {
-          "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+        "connectionSettings": {
+          "name": "ControlDB",
+          "properties": {
+            "annotations": [],
+            "type": "FabricSqlDatabase",
+            "typeProperties": {
+              "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+              "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+            },
+            "externalReferences": {
+              "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+            }
+          }
         }
       },
       {
@@ -438,15 +460,11 @@
         },
         "typeProperties": {
           "source": {
-            "type": "AzureSqlSource",
+            "type": "FabricSqlDatabaseSource",
             "sqlReaderStoredProcedureName": "[ELT].[GetTransformDefinition_L2]",
             "storedProcedureParameters": {
               "IngestID": {
-                "type": "Int32",
-                "value": {
-                  "value": "@pipeline().parameters.IngestID",
-                  "type": "Expression"
-                }
+                "type": "Int32"
               }
             },
             "queryTimeout": "02:00:00",
@@ -455,14 +473,23 @@
           "firstRowOnly": false,
           "datasetSettings": {
             "annotations": [],
-            "type": "AzureSqlTable",
-            "schema": [],
-            "typeProperties": {
-              "database": "controlDB"
+            "connectionSettings": {
+              "name": "ControlDB",
+              "properties": {
+                "annotations": [],
+                "type": "FabricSqlDatabase",
+                "typeProperties": {
+                  "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+                  "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+                },
+                "externalReferences": {
+                  "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+                }
+              }
             },
-            "externalReferences": {
-              "connection": "1482641b-cb50-4e40-9451-885e8990c273"
-            }
+            "type": "FabricSqlDatabaseTable",
+            "schema": [],
+            "typeProperties": {}
           }
         }
       },
@@ -711,8 +738,19 @@
                   }
                 }
               },
-              "externalReferences": {
-                "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+              "connectionSettings": {
+                "name": "ControlDB",
+                "properties": {
+                  "annotations": [],
+                  "type": "FabricSqlDatabase",
+                  "typeProperties": {
+                    "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+                    "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+                  },
+                  "externalReferences": {
+                    "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+                  }
+                }
               }
             }
           ]
@@ -767,8 +805,19 @@
             }
           }
         },
-        "externalReferences": {
-          "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+        "connectionSettings": {
+          "name": "ControlDB",
+          "properties": {
+            "annotations": [],
+            "type": "FabricSqlDatabase",
+            "typeProperties": {
+              "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+              "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+            },
+            "externalReferences": {
+              "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+            }
+          }
         }
       },
       {

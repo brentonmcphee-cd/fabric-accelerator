@@ -2,74 +2,73 @@
   "properties": {
     "activities": [
       {
-        "name": "Get Level1 Transform Instances",
         "type": "Lookup",
-        "dependsOn": [],
-        "policy": {
-          "timeout": "0.12:00:00",
-          "retry": 0,
-          "retryIntervalInSeconds": 30,
-          "secureOutput": false,
-          "secureInput": false
-        },
         "typeProperties": {
           "source": {
             "type": "FabricSqlDatabaseSource",
             "sqlReaderStoredProcedureName": "[ELT].[GetTransformInstance_L1]",
             "storedProcedureParameters": {
               "DelayL1TransformationFlag": {
-                "type": "Int32",
                 "value": {
                   "value": "@pipeline().parameters.DelayL1TransformationFlag",
                   "type": "Expression"
-                }
+                },
+                "type": "Int32"
               },
               "MaxTransformInstance": {
-                "type": "Int32",
                 "value": {
                   "value": "@pipeline().parameters.MaxTransformInstance",
                   "type": "Expression"
-                }
+                },
+                "type": "Int32"
               },
               "SourceSystemName": {
-                "type": "String",
                 "value": {
                   "value": "@pipeline().parameters.SourceSystemName",
                   "type": "Expression"
-                }
+                },
+                "type": "String"
               },
               "StreamName": {
-                "type": "String",
                 "value": {
                   "value": "@pipeline().parameters.StreamName",
                   "type": "Expression"
-                }
+                },
+                "type": "String"
               }
             },
-            "queryTimeout": "02:00:00",
-            "partitionOption": "None"
+            "partitionOption": "None",
+            "queryTimeout": "02:00:00"
           },
           "datasetSettings": {
-            "annotations": [],
+            "type": "FabricSqlDatabaseTable",
+            "schema": [],
             "connectionSettings": {
               "name": "ControlDB",
               "properties": {
-                "annotations": [],
                 "type": "FabricSqlDatabase",
                 "typeProperties": {
-                  "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
-                  "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+                  "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1",
+                  "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117"
                 },
                 "externalReferences": {
                   "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
-                }
+                },
+                "annotations": []
               }
             },
-            "type": "FabricSqlDatabaseTable",
-            "schema": [],
-            "typeProperties": {}
+            "annotations": []
           }
-        }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Get Level1 Transform Instances",
+        "dependsOn": []
       },
       {
         "type": "ForEach",
