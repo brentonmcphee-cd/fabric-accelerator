@@ -85,14 +85,7 @@
       "StreamName": {
         "type": "string"
       }
-      ,
-      "SilverObjectID": {
-        "type": "string",
-        "defaultValue": "ca9d44c6-e9e6-496c-8299-cb5ec36c87d3"
-      },
-      "SilverWorkspaceID": {
-        "type": "string",
-        "defaultValue": "5acf5e70-08fd-48ba-9acc-dc997b845117"
+      
     }
   }
 }
