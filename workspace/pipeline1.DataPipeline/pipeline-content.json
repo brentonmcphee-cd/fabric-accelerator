@@ -15,13 +15,34 @@
         "typeProperties": {
           "source": {
             "type": "FabricSqlDatabaseSource",
-            "sqlReaderStoredProcedureName": "[ELT].[GetTransformDefinition_L1]",
+            "sqlReaderStoredProcedureName": "[ELT].[GetTransformInstance_L1]",
             "storedProcedureParameters": {
-              "DeltaDate": {
-                "type": "DateTime"
+              "DelayL1TransformationFlag": {
+                "type": "Int32",
+                "value": {
+                  "value": "@pipeline().parameters.DelayL1TransformationFlag",
+                  "type": "Expression"
+                }
               },
-              "IngestID": {
-                "type": "Int32"
+              "MaxTransformInstance": {
+                "type": "Int32",
+                "value": {
+                  "value": "@pipeline().parameters.MaxTransformInstance",
+                  "type": "Expression"
+                }
+              },
+              "SourceSystemName": {
+                "type": "String",
+                "value": {
+                  "value": "@pipeline().parameters.SourceSystemName",
+                  "type": "Expression"
+                }
+              },
+              "StreamName": {
+                "type": "String",
+                "value": {
+                  "value": "@pipeline().parameters.StreamName",
+                  "type": "Expression"
               }
             },
             "queryTimeout": "02:00:00",
