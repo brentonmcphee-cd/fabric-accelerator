@@ -5,49 +5,57 @@
         "type": "Lookup",
         "typeProperties": {
           "source": {
-            "type": "AzureSqlSource",
+            "type": "FabricSqlDatabaseSource",
             "sqlReaderStoredProcedureName": "[ELT].[GetTransformInstance_L2]",
             "storedProcedureParameters": {
               "DelayL2TransformationFlag": {
-                "type": "Int32",
                 "value": {
                   "value": "@pipeline().parameters.DelayL2TransformationFlag",
                   "type": "Expression"
-                }
+                },
+                "type": "Int32"
               },
               "MaxTransformInstance": {
-                "type": "Int32",
                 "value": {
                   "value": "@pipeline().parameters.MaxTransformInstance",
                   "type": "Expression"
-                }
+                },
+                "type": "Int32"
               },
               "SourceSystemName": {
-                "type": "String",
                 "value": {
                   "value": "@pipeline().parameters.SourceSystemName",
                   "type": "Expression"
-                }
+                },
+                "type": "String"
               },
               "StreamName": {
-                "type": "String",
                 "value": {
                   "value": "@pipeline().parameters.StreamName",
                   "type": "Expression"
-                }
+                },
+                "type": "String"
               }
             },
             "partitionOption": "None",
             "queryTimeout": "02:00:00"
           },
           "datasetSettings": {
-            "type": "AzureSqlTable",
-            "typeProperties": {
-              "database": "controlDB"
-            },
+            "type": "FabricSqlDatabaseTable",
             "schema": [],
-            "externalReferences": {
-              "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+            "connectionSettings": {
+              "name": "ControlDB",
+              "properties": {
+                "type": "FabricSqlDatabase",
+                "typeProperties": {
+                  "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1",
+                  "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117"
+                },
+                "externalReferences": {
+                  "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+                },
+                "annotations": []
+              }
             },
             "annotations": []
           },
