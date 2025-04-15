@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "DataPipeline",
-    "displayName": "pipeline1"
+    "type": "SQLDatabase",
+    "displayName": "WorldWideImporters"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "0b4a5c94-53a2-9c90-4dbe-5cea172c554d"
+    "logicalId": "1799a9b2-1cd1-b312-4914-052643ec91ae"
   }
 }
