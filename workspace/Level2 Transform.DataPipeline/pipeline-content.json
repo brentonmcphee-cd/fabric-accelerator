@@ -251,8 +251,19 @@
             }
           }
         },
-        "externalReferences": {
-          "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+        "connectionSettings": {
+          "name": "ControlDB",
+          "properties": {
+            "annotations": [],
+            "type": "FabricSqlDatabase",
+            "typeProperties": {
+              "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+              "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+            },
+            "externalReferences": {
+              "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+            }
+          }
         }
       },
       {
@@ -576,8 +587,19 @@
             }
           }
         },
-        "externalReferences": {
-          "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+        "connectionSettings": {
+          "name": "ControlDB",
+          "properties": {
+            "annotations": [],
+            "type": "FabricSqlDatabase",
+            "typeProperties": {
+              "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+              "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+            },
+            "externalReferences": {
+              "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+            }
+          }
         }
       },
       {
@@ -657,8 +679,19 @@
             }
           }
         },
-        "externalReferences": {
-          "connection": "1482641b-cb50-4e40-9451-885e8990c273"
+        "connectionSettings": {
+          "name": "ControlDB",
+          "properties": {
+            "annotations": [],
+            "type": "FabricSqlDatabase",
+            "typeProperties": {
+              "workspaceId": "5acf5e70-08fd-48ba-9acc-dc997b845117",
+              "artifactId": "92ec2943-fbc4-4692-9896-a663a200f6a1"
+            },
+            "externalReferences": {
+              "connection": "4fb215a6-614a-44f6-805b-d37c667a0136"
+            }
+          }
         }
       }
     ],
